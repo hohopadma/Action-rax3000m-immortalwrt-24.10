@@ -1,20 +1,9 @@
 #!/bin/bash
 
-# 移除 openwrt feeds 自带的核心库
-rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
-git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
+# 移除 openwrt feeds 自带的核心库 (保留 sing-box)
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 
-# 移除 openwrt feeds 过时的luci版本
-rm -rf feeds/luci/applications/luci-app-passwall
-git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
-
-# 移除过时的helloworld
-rm -rf package/helloworld
-git clone https://github.com/fw876/helloworld.git package/helloworld
-
-# vssr
-git clone  git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-git clone  https://github.com/MilesPoupart/luci-app-vssr.git package/luci-app-vssr 
+# 已移除 passwall / helloworld / vssr，仅使用 sing-box 
 
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky                               #  lucky 
 
