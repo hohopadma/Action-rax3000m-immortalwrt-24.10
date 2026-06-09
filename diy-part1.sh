@@ -7,6 +7,4 @@ rm -rf feeds/packages/net/{xray-core,v2ray-geodata,chinadns-ng,dns2socks,hysteri
 
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky                               #  lucky 
 
-git clone https://github.com/sirpdboy/luci-app-taskplan.git package/luci-app-taskplan               #  定时任务设置
-
 
