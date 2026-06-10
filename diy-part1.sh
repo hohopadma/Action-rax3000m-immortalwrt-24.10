@@ -5,6 +5,5 @@ rm -rf feeds/packages/net/{xray-core,v2ray-geodata,chinadns-ng,dns2socks,hysteri
 
 # 已移除 passwall / helloworld / vssr / mympd，仅使用 sing-box 
 
-git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky                               #  lucky 
-
-
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky                               #  lucky
+git clone  https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora               #  aurora theme
