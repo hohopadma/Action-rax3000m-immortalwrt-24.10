@@ -127,13 +127,6 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
       
-    - name: Fix libwebsockets OpenSSL header detection
-      run: |
-        cd openwrt
-        # fix libwebsockets-full not finding OpenSSL RSA type
-        sed -i "/CMAKE_OPTIONS/a PKG_BUILD_PARALLEL:=0" feeds/packages/libs/libwebsockets/Makefile
-        sed -i "s|CMAKE_OPTIONS =|CMAKE_OPTIONS = -DCMAKE_NO_SYSTEM_FROM_INSTALLED=ON |" feeds/packages/libs/libwebsockets/Makefile
-
     - name: Load custom configuration
       run: |
         [ -d "$GITHUB_WORKSPACE/files" ] && cp -rf "$GITHUB_WORKSPACE/files" "$GITHUB_WORKSPACE/openwrt/"
